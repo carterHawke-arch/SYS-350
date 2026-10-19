@@ -1,5 +1,6 @@
 ## terraform.tfvars (redacted)
 
+```hcl
 student_name = "carter"
 networks     = ["devops", "internal", "web"]
 corp_octet   = 11
@@ -28,3 +29,4 @@ vms = {
   "carter-win11"      = { os = "win11" }
   "carter-ubuntu-srv" = { os = "ubuntu-server", memory_mb = 2048, vcpu = 1 }
 }
+```
