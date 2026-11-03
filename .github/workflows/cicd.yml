@@ -9,6 +9,9 @@ on:
 jobs:
   terraform:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ci-cd
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
