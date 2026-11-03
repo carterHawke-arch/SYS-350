@@ -46,6 +46,7 @@ variable "student_name" {
 
 resource "aws_s3_bucket" "website" {
   bucket = "${var.student_name}-course-website"
+  force-destroy = true
 }
 
 resource "aws_s3_bucket_versioning" "website" {
