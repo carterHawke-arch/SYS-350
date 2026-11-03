@@ -44,7 +44,10 @@ jobs:
           done
           echo "floci did not become healthy in time" >&2
           exit 1
-
+      
+      - name: Build Lambda package
+        run: cd lambda && zip ../lambda.zip lambda_function.py
+      
       - name: Plan
         run: terraform plan -no-color -input=false -out=tfplan
 
